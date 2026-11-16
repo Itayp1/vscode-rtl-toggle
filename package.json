@@ -1,0 +1,22 @@
+{
+  "name": "rtl-toggle",
+  "displayName": "RTL/LTR/AUTO for Copilot Chat",
+  "version": "0.2.2",
+  "publisher": "local",
+  "repository": {"type":"git","url":"https://github.com/Itayp1/vscode-rtl-toggle"},
+  "engines": { "vscode": "^1.85.0" },
+  "main": "./extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "commands": [
+      { "command": "rtlToggle.pick", "title": "RTL Toggle: Choose direction" },
+      { "command": "rtlToggle.install", "title": "RTL Toggle: Install into VS Code (one-time)" },
+      { "command": "rtlToggle.uninstall", "title": "RTL Toggle: Uninstall from VS Code" }
+    ],
+    "configuration": {
+      "properties": {
+        "rtlToggle.port": { "type": "number", "default": 37645, "description": "Local WebSocket port (changing it requires re-running Install)." }
+      }
+    }
+  }
+}
